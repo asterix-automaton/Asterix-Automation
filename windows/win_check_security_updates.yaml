@@ -1,0 +1,27 @@
+---
+- name: Deploy monitoring
+  hosts: monitoring
+  become: true
+
+  # module_defaults:
+  #   ansible.posix.firewalld:
+  #     permanent: true
+
+  tasks:
+    - name: Search-only, return list of found updates (if any), log to C:\ansible_wu.txt
+      ansible.windows.win_updates:
+        category_names: SecurityUpdates
+        state: searched
+        log_path: C:\ansible_wu.txt
+
+    - name: cat the content of the file C:\ansible_wu.txt
+      ansible.windows.win_shell: cat C:\ansible_wu.txt
+      register: results
+    
+    - name: Show the content of the variable results
+      ansible.builtin.debug:
+        var: results.stdout_lines
+    
+
+    
+
