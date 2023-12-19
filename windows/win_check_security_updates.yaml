@@ -1,6 +1,6 @@
 ---
 - name: Security Checkup
-  hosts: AD
+  hosts: {{ host_name }}
   #become: true
 
   # module_defaults:
