@@ -1,7 +1,7 @@
 ---
 - name: Security Checkup
   hosts: AD
-  become: true
+  #become: true
 
   # module_defaults:
   #   ansible.posix.firewalld:
