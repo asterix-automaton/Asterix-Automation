@@ -1,6 +1,6 @@
 ---
-- name: Deploy monitoring
-  hosts: monitoring
+- name: Security Checkup
+  hosts: {{ hostname }}
   become: true
 
   # module_defaults:
