@@ -1,6 +1,6 @@
 ---
 - name: Security Checkup
-  hosts: windows
+  hosts: AD
   become: true
 
   # module_defaults:
