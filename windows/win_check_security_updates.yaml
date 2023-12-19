@@ -1,6 +1,6 @@
 ---
 - name: Security Checkup
-  hosts: {{ host_name }}
+  hosts: "{{ host_name }}"
   #become: true
 
   # module_defaults:
