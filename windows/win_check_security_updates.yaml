@@ -1,6 +1,6 @@
 ---
 - name: Security Checkup
-  hosts: {{ hostname }}
+  hosts: windows
   become: true
 
   # module_defaults:
